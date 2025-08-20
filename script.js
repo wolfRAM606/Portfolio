@@ -2,6 +2,27 @@ document.addEventListener('DOMContentLoaded', () => {
     // GSAP and ScrollTrigger registration
     gsap.registerPlugin(ScrollTrigger);
 
+    // --- Custom Cursor Animation ---
+    const blob = document.querySelector('.cursor-blob');
+    let mouseX = 0;
+    let mouseY = 0;
+    let blobX = 0;
+    let blobY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+    });
+
+    const animateCursor = () => {
+        blobX += (mouseX - blobX) * 0.1; // Slower, fluid movement
+        blobY += (mouseY - blobY) * 0.1;
+        blob.style.transform = `translate3d(${blobX}px, ${blobY}px, 0)`;
+
+        requestAnimationFrame(animateCursor);
+    };
+    animateCursor();
+    
     // --- Navbar Toggle for Mobile ---
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
@@ -63,35 +84,13 @@ document.addEventListener('DOMContentLoaded', () => {
             if (entry.isIntersecting) {
                 entry.target.classList.add('section-visible');
                 // Optional: Stop observing once it's visible to save resources
-                // observer.unobserve(entry.target);
-            } else {
-                // Optional: Re-add hidden class if user scrolls away,
-                // useful for sections that should animate repeatedly
-                // entry.target.classList.remove('section-visible');
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
 
     sections.forEach(section => {
         sectionObserver.observe(section);
-    });
-
-    // --- Timeline Scroll Animation (GSAP ScrollTrigger) ---
-    const timelineItems = document.querySelectorAll('.timeline-item');
-    timelineItems.forEach((item, index) => {
-        gsap.from(item, {
-            opacity: 0,
-            y: 100,
-            duration: 1,
-            ease: "power3.out",
-            scrollTrigger: {
-                trigger: item,
-                start: "top 85%", // When 85% of the item is in view
-                end: "bottom 20%",
-                toggleActions: "play none none reverse", // Play on enter, reverse on leave
-                // markers: true, // For debugging
-            }
-        });
     });
 
     // --- Contact Form Validation (Client-side) ---
