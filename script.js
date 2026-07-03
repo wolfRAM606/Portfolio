@@ -20,33 +20,47 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // --- Hero Section Animation ---
-    gsap.from(".hero-content", {
+    gsap.from(".hero-subtitle", {
         opacity: 0,
-        y: 50,
-        duration: 1.2,
+        x: -50,
+        duration: 1,
         ease: "power3.out",
-        delay: 0.5
+        delay: 0.4
     });
     gsap.from(".hero-title", {
         opacity: 0,
-        y: 20,
+        x: -50,
         duration: 1,
-        ease: "power2.out",
-        delay: 0.8
+        ease: "power3.out",
+        delay: 0.6
     });
     gsap.from(".hero-tagline", {
         opacity: 0,
-        y: 20,
+        x: -50,
         duration: 1,
-        ease: "power2.out",
-        delay: 1
+        ease: "power3.out",
+        delay: 0.8
     });
-    gsap.from(".primary-btn", {
+    gsap.from(".hero-actions", {
         opacity: 0,
         y: 20,
         duration: 1,
+        ease: "power3.out",
+        delay: 1.0
+    });
+    gsap.from(".hero-right", {
+        opacity: 0,
+        x: 50,
+        duration: 1.2,
+        ease: "power3.out",
+        delay: 0.8
+    });
+    gsap.from(".scroll-indicator", {
+        opacity: 0,
+        y: -20,
+        duration: 1,
         ease: "power2.out",
-        delay: 1.2
+        delay: 1.4
     });
 
 

@@ -30,10 +30,47 @@
 
     <main>
         <section class="hero-section" id="hero">
-            <div class="hero-content">
-                <h1 class="hero-title">Sriram</h1>
-                <p class="hero-tagline">Engineering the unexpected. Code. Creativity. Curiosity.</p>
-                <a href="#projects" class="btn primary-btn">Explore My Work <i class="fas fa-arrow-right"></i></a>
+            <div class="hero-container">
+                <div class="hero-left">
+                    <span class="hero-subtitle">Hi, my name is</span>
+                    <h1 class="hero-title">Sriram.</h1>
+                    <p class="hero-tagline">Engineering the unexpected. Code. Creativity. Curiosity.</p>
+                    <div class="hero-actions">
+                        <a href="#projects" class="btn primary-btn">Explore My Work <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                </div>
+                <div class="hero-right">
+                    <div class="terminal-card">
+                        <div class="terminal-header">
+                            <span class="terminal-dot red"></span>
+                            <span class="terminal-dot yellow"></span>
+                            <span class="terminal-dot green"></span>
+                            <span class="terminal-title">sriram.py</span>
+                        </div>
+                        <div class="terminal-body">
+                            <pre><code><span class="code-keyword">class</span> <span class="code-class">Developer</span>:
+    <span class="code-keyword">def</span> <span class="code-method">__init__</span>(self):
+        self.name = <span class="code-string">"Sriram Rajakumar"</span>
+        self.role = <span class="code-string">"CS Undergrad @ VIT"</span>
+        self.interests = [<span class="code-string">"Systems"</span>, <span class="code-string">"AI/ML"</span>, <span class="code-string">"HPC"</span>]
+        
+    <span class="code-keyword">def</span> <span class="code-method">get_status</span>(self):
+        <span class="code-keyword">return</span> <span class="code-string">"Always building, always curious."</span>
+
+sriram = Developer()
+print(sriram.get_status())
+<span class="code-output"># Output: Always building, always curious.</span></code></pre>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="scroll-indicator">
+                <a href="#about" aria-label="Scroll to About Section">
+                    <span class="mouse-icon">
+                        <span class="wheel"></span>
+                    </span>
+                    <span class="arrow-down"></span>
+                </a>
             </div>
         </section>
 
@@ -203,23 +240,50 @@
         <section class="contact-section section-hidden" id="contact">
             <div class="container">
                 <h2 class="section-title">Let's Connect.</h2>
-                <p class="contact-intro">Whether you have a project idea, a collaboration opportunity, or just want to chat about tech and creativity, I'm always open to new connections. Drop me a message below!</p>
-                <form class="contact-form" id="contactForm">
-                    <div class="form-group">
-                        <label for="name">Your Name</label>
-                        <input type="text" id="name" name="name" placeholder="Sriram" required>
+                <div class="contact-grid">
+                    <div class="contact-info">
+                        <p class="contact-intro">Whether you have a project idea, a collaboration opportunity, or just want to chat about systems, tech, or astronomy, feel free to reach out directly or send a message here.</p>
+                        <div class="contact-methods">
+                            <div class="contact-method-card">
+                                <i class="fas fa-envelope"></i>
+                                <div>
+                                    <h4>Work Email</h4>
+                                    <a href="mailto:sriram.r2023a@vitstudent.ac.in">sriram.r2023a@vitstudent.ac.in</a>
+                                </div>
+                            </div>
+                            <div class="contact-method-card">
+                                <i class="fab fa-linkedin"></i>
+                                <div>
+                                    <h4>LinkedIn</h4>
+                                    <a href="https://www.linkedin.com/in/sriram-rajakumar/" target="_blank">linkedin.com/in/sriram-rajakumar</a>
+                                </div>
+                            </div>
+                            <div class="contact-method-card">
+                                <i class="fab fa-github"></i>
+                                <div>
+                                    <h4>GitHub</h4>
+                                    <a href="https://github.com/wolfRAM606" target="_blank">github.com/wolfRAM606</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message">Your Message</label>
-                        <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or idea..." required></textarea>
-                    </div>
-                    <button type="submit" class="btn primary-btn send-btn">Send Message <i class="fas fa-paper-plane"></i></button>
-                    <div id="form-messages" class="form-messages"></div>
-                </form>
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" name="name" placeholder="Sriram" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" name="email" placeholder="you@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell me about your project or idea..." required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn send-btn">Send Message <i class="fas fa-paper-plane"></i></button>
+                        <div id="form-messages" class="form-messages"></div>
+                    </form>
+                </div>
             </div>
         </section>
     </main>
