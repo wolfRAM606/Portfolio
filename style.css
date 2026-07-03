@@ -295,8 +295,6 @@ p {
 
 .hero-content {
     z-index: 1;
-    opacity: 0; /* Will be animated in by GSAP */
-    transform: translateY(20px); /* Will be animated in by GSAP */
 }
 
 .hero-title {
@@ -401,6 +399,7 @@ section {
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 0;
+    pointer-events: none;
 }
 
 .skill-category:hover::before {
@@ -477,6 +476,7 @@ section {
     opacity: 0;
     transition: opacity 0.5s ease;
     z-index: 0;
+    pointer-events: none;
 }
 
 .project-card:hover::before {
