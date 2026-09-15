@@ -53,7 +53,7 @@
     <span class="code-keyword">def</span> <span class="code-method">__init__</span>(self):
         self.name = <span class="code-string">"Sriram Rajakumar"</span>
         self.role = <span class="code-string">"CS Undergrad @ VIT"</span>
-        self.interests = [<span class="code-string">"Systems"</span>, <span class="code-string">"AI/ML"</span>, <span class="code-string">"HPC"</span>]
+        self.interests = [<span class="code-string">"Systems"</span>, <span class="code-string">"AI/ML"</span>, <span class="code-string">"Full-Stack"</span>]
         
     <span class="code-keyword">def</span> <span class="code-method">get_status</span>(self):
         <span class="code-keyword">return</span> <span class="code-string">"Always building, always curious."</span>
@@ -106,10 +106,11 @@ print(sriram.get_status())
                         <h3><i class="fas fa-globe"></i> Frameworks</h3>
                         <ul>
                             <li>React</li>
-                            <li>Streamlit</li>
                             <li>FastAPI</li>
+                            <li>Node.js / Express</li>
                             <li>TensorFlow / Keras</li>
-                            <li>Firebase</li>
+                            <li>Three.js</li>
+                            <li>Streamlit</li>
                             <li>Tailwind CSS</li>
                         </ul>
                     </div>
@@ -118,21 +119,33 @@ print(sriram.get_status())
                         <ul>
                             <li>Git / GitHub</li>
                             <li>Linux (CentOS)</li>
+                            <li>Docker</li>
+                            <li>Vercel / Render</li>
                             <li>SSH / Paramiko</li>
                             <li>PBS / TORQUE</li>
-                            <li>VMware</li>
                             <li>Figma</li>
+                        </ul>
+                    </div>
+                    <div class="skill-category">
+                        <h3><i class="fas fa-database"></i> Data and AI</h3>
+                        <ul>
+                            <li>SQLAlchemy / Prisma ORM</li>
+                            <li>PostgreSQL / SQLite</li>
+                            <li>Firebase</li>
+                            <li>Pydantic / Zod</li>
+                            <li>Google Gemini AI</li>
+                            <li>Prompt Engineering</li>
                         </ul>
                     </div>
                     <div class="skill-category">
                         <h3><i class="fas fa-lightbulb"></i> Concepts</h3>
                         <ul>
                             <li>Machine Learning</li>
-                            <li>Client-Server Architecture</li>
+                            <li>REST APIs / WebSockets</li>
+                            <li>JWT Auth / RBAC</li>
                             <li>HPC / Job Scheduling</li>
-                            <li>REST APIs</li>
-                            <li>DBMS / SQL</li>
-                            <li>Agile / SDLC</li>
+                            <li>3D Data Visualization</li>
+                            <li>CI/CD / Cloud Deployment</li>
                         </ul>
                     </div>
                     <div class="skill-category">
@@ -152,13 +165,40 @@ print(sriram.get_status())
             <div class="container">
                 <h2 class="section-title">What I've Built.</h2>
                 <div class="projects-grid">
+                    <div class="project-card featured">
+                        <span class="project-badge">New</span>
+                        <h3>MeetMind</h3>
+                        <p>An end-to-end AI meeting intelligence platform that turns raw transcripts into structured action items, decisions, risk registers, grounded Q&A, and automated follow-up communications — with strict anti-hallucination schema validation.</p>
+                        <div class="project-tags">
+                            <span>Python</span><span>FastAPI</span><span>React</span><span>Gemini AI</span><span>SQLAlchemy</span><span>Pydantic</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/wolfRAM606/MeetMind" target="_blank" class="project-link" aria-label="View MeetMind on GitHub">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://meetmind-backend-xvtn.onrender.com/docs" target="_blank" class="project-link demo-link" aria-label="View MeetMind API Docs">Live API Docs <i class="fas fa-play-circle"></i></a>
+                        </div>
+                    </div>
+                    <div class="project-card featured">
+                        <span class="project-badge">New</span>
+                        <h3>The Common Room</h3>
+                        <p>A full-stack residential maintenance platform with interactive 3D infographics (Three.js), role-based portals for residents and admins, real-time KPI dashboards, automated overdue tracking, immutable audit logs, and light/dark mode.</p>
+                        <div class="project-tags">
+                            <span>React</span><span>Three.js</span><span>Node.js</span><span>Express</span><span>Prisma</span><span>PostgreSQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/wolfRAM606/the-common-room" target="_blank" class="project-link" aria-label="View The Common Room on GitHub">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                            <a href="https://the-common-room-eight.vercel.app" target="_blank" class="project-link demo-link" aria-label="View The Common Room Live Demo">Live Demo <i class="fas fa-play-circle"></i></a>
+                        </div>
+                    </div>
+
                     <div class="project-card">
                         <h3>DRDL Remote HPC Job Execution System</h3>
                         <p>A web-based platform for submitting and monitoring computational jobs on remote Linux servers over SSH with PBS/TORQUE-compatible scheduling and real-time diagnostics.</p>
                         <div class="project-tags">
                             <span>Python</span><span>Streamlit</span><span>SSH</span><span>PBS</span><span>Linux</span>
                         </div>
-                        <a href="https://github.com/wolfRAM606/drdl-remote-hpc-job-execution-prototype" target="_blank" class="project-link" aria-label="View DRDL Remote HPC System">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                        <div class="project-links">
+                            <a href="https://github.com/wolfRAM606/drdl-remote-hpc-job-execution-prototype" target="_blank" class="project-link" aria-label="View DRDL Remote HPC System">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <div class="project-card">
                         <h3>Raga Lens</h3>
@@ -166,7 +206,9 @@ print(sriram.get_status())
                         <div class="project-tags">
                             <span>TensorFlow</span><span>FastAPI</span><span>React</span><span>AI/ML</span>
                         </div>
-                        <a href="https://github.com/wolfRAM606/raga-lens" target="_blank" class="project-link" aria-label="View Raga Lens Project">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                        <div class="project-links">
+                            <a href="https://github.com/wolfRAM606/raga-lens" target="_blank" class="project-link" aria-label="View Raga Lens Project">View on GitHub <i class="fas fa-external-link-alt"></i></a>
+                        </div>
                     </div>
                     <div class="project-card">
                         <h3>Campus Homie</h3>
@@ -174,16 +216,11 @@ print(sriram.get_status())
                         <div class="project-tags">
                             <span>React</span><span>Firebase</span><span>Vite</span><span>Tailwind</span>
                         </div>
-                        <a href="https://github.com/wolfRAM606/Campus-Homie" target="_blank" class="project-link" aria-label="View Campus Homie Project">View on GitHub <i class="fas fa-external-link-alt"></i></a>
-                    </div>
-                    <div class="project-card">
-                        <h3>Recipeek</h3>
-                        <p>A mobile-first recipe discovery and meal planning interface designed with usability as the primary focus, emphasizing intuitive interaction over unnecessary complexity.</p>
-                        <div class="project-tags">
-                            <span>HTML/CSS/JS</span><span>Mobile UI</span><span>Usability Testing</span>
+                        <div class="project-links">
+                            <a href="https://github.com/wolfRAM606/Campus-Homie" target="_blank" class="project-link" aria-label="View Campus Homie Project">View on GitHub <i class="fas fa-external-link-alt"></i></a>
                         </div>
-                        <a href="https://github.com/wolfRAM606/Recipeek---Usability" target="_blank" class="project-link" aria-label="View Recipeek Project">View on GitHub <i class="fas fa-external-link-alt"></i></a>
                     </div>
+
                 </div>
                 <div class="projects-conclusion" style="margin-top: var(--spacing-lg); text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; color: var(--text-medium); font-size: 1.1rem; line-height: 1.8;">
                     <p>Across these projects, my goal has never been to build software simply to showcase a technology stack, but to understand a problem deeply and design a solution that feels practical, maintainable, and genuinely useful.</p>
@@ -212,6 +249,12 @@ print(sriram.get_status())
                             <h3><i class="fas fa-users-cog"></i> Stellar (VIT Astronomy Club)</h3>
                             <p><strong>Senior Core Member</strong></p>
                             <p>Organized technical events, coordinated teams, mentored junior members, worked with sponsors, and contributed to workshops and community initiatives. These experiences strengthened my leadership, communication, and collaborative problem-solving skills just as much as my technical ones.</p>
+                        </li>
+                        <li>
+                            <h3><i class="fas fa-laptop-code"></i> Hackathons</h3>
+                            <p><strong>Prodapt Hackathon</strong> — Built <em>MeetMind</em>, an end-to-end AI meeting intelligence platform with structured extraction, anti-hallucination pipelines, and automated follow-up generation. Deployed backend on Render with full test coverage.</p>
+                            <p><strong>Unthinkable Hackathon</strong> — Built <em>The Common Room</em>, a full-stack residential maintenance platform with interactive 3D infographics (Three.js), role-based portals, transactional state machines, and automated overdue tracking. Deployed across Vercel, Render, and Neon Cloud.</p>
+
                         </li>
                         <li>
                             <h3><i class="fas fa-trophy"></i> National Competitions & Recognition</h3>
