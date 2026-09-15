@@ -648,6 +648,44 @@ section {
     color: var(--secondary-color);
 }
 
+.project-card.featured {
+    border-color: var(--primary-color);
+    box-shadow: 0 4px 20px rgba(187, 134, 252, 0.15);
+}
+
+.project-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--background-dark);
+    font-family: var(--font-mono);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    z-index: 1;
+}
+
+.demo-link {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--background-dark) !important;
+    padding: 0.5rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    margin-left: 0.75rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 15px rgba(187, 134, 252, 0.4);
+    color: var(--background-dark) !important;
+}
+
 .coming-soon {
     background-color: rgba(30, 30, 30, 0.7); /* Slightly dimmer for coming soon */
     border-style: dashed;
