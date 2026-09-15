@@ -1,0 +1,31 @@
+name: Zero-Credit Portfolio Auto-Sync
+
+on:
+  workflow_dispatch: # Allows manual trigger from GitHub UI
+  schedule:
+    - cron: '0 0 * * 0' # Optional weekly check (100% free on GitHub)
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Portfolio Repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Run Auto-Sync Script
+        run: node scripts/sync-local.js
+
+      - name: Commit & Push Changes
+        run: |
+          git config --global user.name "Portfolio-AutoSync-Bot"
+          git config --global user.email "bot@portfolio.local"
+          git add data/content.json
+          git diff --quiet && git diff --staged --quiet || (git commit -m "chore(auto-sync): update portfolio content from github repos" && git push)

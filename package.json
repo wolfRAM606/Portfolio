@@ -1,0 +1,13 @@
+{
+  "name": "sriram-portfolio",
+  "version": "2.0.0",
+  "description": "Sriram Rajakumar - Engineering the Unexpected Portfolio & Admin CMS",
+  "main": "index.html",
+  "scripts": {
+    "sync": "node scripts/sync-local.js",
+    "start": "npx serve ."
+  },
+  "keywords": ["portfolio", "cms", "developer"],
+  "author": "Sriram Rajakumar",
+  "license": "MIT"
+}

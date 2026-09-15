@@ -1175,3 +1175,332 @@ section {
     50% { transform: translateY(15px); opacity: 0.5; }
     100% { transform: translateY(0); opacity: 1; }
 }
+
+/* ==========================================================================
+   Admin Mode & CMS Panel Styles
+   ========================================================================== */
+
+/* Floating Admin Toolbar (Visible when Admin Mode is ON) */
+.admin-floating-bar {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    background: rgba(18, 24, 38, 0.88);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid rgba(187, 134, 252, 0.4);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5), 0 0 20px rgba(187, 134, 252, 0.2);
+    border-radius: 50px;
+    padding: 8px 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    z-index: 99999;
+    font-family: var(--font-body);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.admin-floating-bar.hidden {
+    display: none !important;
+}
+
+.admin-bar-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-size: 0.85rem;
+    font-weight: 600;
+    font-family: var(--font-mono);
+}
+
+.admin-bar-actions {
+    display: flex;
+    gap: 8px;
+}
+
+.admin-btn-sm {
+    background: rgba(255, 255, 255, 0.08);
+    color: var(--text-light);
+    border: 1px solid var(--border-color);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    transition: all 0.2s ease;
+}
+
+.admin-btn-sm:hover {
+    background: var(--primary-color);
+    color: var(--background-dark);
+    border-color: var(--primary-color);
+}
+
+.admin-btn-sm.publish-btn {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: var(--background-dark);
+    border: none;
+}
+
+/* Modals (Password Prompt & Admin Dashboard) */
+.admin-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(4, 7, 14, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100000;
+    padding: 20px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
+.admin-modal-overlay.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.admin-modal-card {
+    background: rgba(18, 24, 38, 0.95);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.6), 0 0 30px rgba(187, 134, 252, 0.15);
+    border-radius: var(--border-radius-md);
+    width: 100%;
+    max-width: 500px;
+    padding: 2rem;
+    position: relative;
+    transform: translateY(20px) scale(0.95);
+    transition: transform 0.3s ease;
+}
+
+.admin-modal-card.large {
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 2.2rem;
+}
+
+.admin-modal-overlay.active .admin-modal-card {
+    transform: translateY(0) scale(1);
+}
+
+.admin-modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.admin-modal-title {
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--text-light);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.admin-modal-title i {
+    color: var(--primary-color);
+}
+
+.admin-close-btn {
+    background: transparent;
+    border: none;
+    color: var(--text-medium);
+    font-size: 1.4rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.admin-close-btn:hover {
+    color: var(--primary-color);
+}
+
+/* Admin Tabs */
+.admin-tabs {
+    display: flex;
+    gap: 10px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+.admin-tab-btn {
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid transparent;
+    padding: 8px 16px;
+    color: var(--text-medium);
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.2s ease;
+}
+
+.admin-tab-btn:hover {
+    color: var(--text-light);
+}
+
+.admin-tab-btn.active {
+    color: var(--primary-color);
+    border-bottom-color: var(--primary-color);
+}
+
+.admin-tab-content {
+    display: none;
+}
+
+.admin-tab-content.active {
+    display: block;
+}
+
+/* CMS Forms & Input fields */
+.admin-form-group {
+    margin-bottom: 1.2rem;
+}
+
+.admin-form-group label {
+    display: block;
+    margin-bottom: 0.4rem;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.admin-input,
+.admin-textarea,
+.admin-select {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    background: rgba(9, 13, 22, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    color: var(--text-light);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.admin-input:focus,
+.admin-textarea:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px rgba(187, 134, 252, 0.2);
+}
+
+.admin-checkbox-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+    cursor: pointer;
+    margin-top: 0.5rem;
+}
+
+/* Item Management Lists */
+.admin-item-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 1.5rem;
+}
+
+.admin-item-row {
+    background: rgba(9, 13, 22, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background 0.2s ease;
+}
+
+.admin-item-row:hover {
+    background: rgba(9, 13, 22, 0.9);
+}
+
+.admin-item-info h4 {
+    color: var(--text-light);
+    font-size: 1rem;
+    margin-bottom: 4px;
+}
+
+.admin-item-info p {
+    color: var(--text-dark);
+    font-size: 0.8rem;
+}
+
+.admin-item-actions {
+    display: flex;
+    gap: 8px;
+}
+
+/* Dropzone for PDF upload */
+.admin-dropzone {
+    border: 2px dashed rgba(187, 134, 252, 0.4);
+    border-radius: 12px;
+    padding: 2.5rem 1.5rem;
+    text-align: center;
+    background: rgba(9, 13, 22, 0.4);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.admin-dropzone:hover,
+.admin-dropzone.dragover {
+    border-color: var(--secondary-color);
+    background: rgba(3, 218, 198, 0.05);
+}
+
+.admin-dropzone i {
+    font-size: 3rem;
+    color: var(--primary-color);
+    margin-bottom: 1rem;
+}
+
+.admin-dropzone p {
+    color: var(--text-medium);
+    margin-bottom: 0.5rem;
+}
+
+.admin-status-toast {
+    position: fixed;
+    top: 24px;
+    right: 24px;
+    background: var(--surface-dark);
+    border: 1px solid var(--primary-color);
+    padding: 12px 20px;
+    border-radius: 8px;
+    color: var(--text-light);
+    font-weight: 500;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    z-index: 100001;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: all 0.3s ease;
+    pointer-events: none;
+}
+
+.admin-status-toast.show {
+    opacity: 1;
+    transform: translateY(0);
+}

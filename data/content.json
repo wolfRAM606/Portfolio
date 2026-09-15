@@ -1,0 +1,211 @@
+{
+  "profile": {
+    "name": "Sriram Rajakumar",
+    "shortName": "Sriram.",
+    "role": "CS Undergrad @ VIT",
+    "tagline": "Engineering the unexpected. Code. Creativity. Curiosity.",
+    "interests": [
+      "Systems",
+      "AI/ML",
+      "Full-Stack"
+    ],
+    "status": "Always building, always curious.",
+    "email": "sriram.r.work@gmail.com",
+    "linkedin": "https://www.linkedin.com/in/sriram-rajakumar",
+    "github": "https://github.com/wolfRAM606",
+    "resumeUrl": "Sriram- Resume.pdf"
+  },
+  "projects": [
+    {
+      "id": "meetmind",
+      "title": "MeetMind",
+      "featured": true,
+      "badge": "New",
+      "description": "An end-to-end AI meeting intelligence platform that turns raw transcripts into structured action items, decisions, risk registers, grounded Q&A, and automated follow-up communications — with strict anti-hallucination schema validation.",
+      "tags": [
+        "Python",
+        "FastAPI",
+        "React",
+        "Gemini AI",
+        "SQLAlchemy",
+        "Pydantic"
+      ],
+      "githubUrl": "https://github.com/wolfRAM606/MeetMind",
+      "demoUrl": "https://meetmind-backend-xvtn.onrender.com/docs",
+      "demoLabel": "Live API Docs"
+    },
+    {
+      "id": "the-common-room",
+      "title": "The Common Room",
+      "featured": true,
+      "badge": "New",
+      "description": "A full-stack residential maintenance platform with interactive 3D infographics (Three.js), role-based portals for residents and admins, real-time KPI dashboards, automated overdue tracking, immutable audit logs, and light/dark mode.",
+      "tags": [
+        "React",
+        "Three.js",
+        "Node.js",
+        "Express",
+        "Prisma",
+        "PostgreSQL"
+      ],
+      "githubUrl": "https://github.com/wolfRAM606/the-common-room",
+      "demoUrl": "https://the-common-room-eight.vercel.app",
+      "demoLabel": "Live Demo"
+    },
+    {
+      "id": "drdl-hpc",
+      "title": "DRDL Remote HPC Job Execution System",
+      "featured": false,
+      "badge": "",
+      "description": "A web-based platform for submitting and monitoring computational jobs on remote Linux servers over SSH with PBS/TORQUE-compatible scheduling and real-time diagnostics.",
+      "tags": [
+        "Python",
+        "Streamlit",
+        "SSH",
+        "PBS",
+        "Linux"
+      ],
+      "githubUrl": "https://github.com/wolfRAM606/drdl-remote-hpc-job-execution-prototype",
+      "demoUrl": "",
+      "demoLabel": ""
+    },
+    {
+      "id": "raga-lens",
+      "title": "Raga Lens",
+      "featured": false,
+      "badge": "",
+      "description": "An AI-powered Carnatic raga identification system built using deep learning models trained across 96 ragas, combining FastAPI, React, TensorFlow, and audio feature engineering.",
+      "tags": [
+        "TensorFlow",
+        "FastAPI",
+        "React",
+        "AI/ML"
+      ],
+      "githubUrl": "https://github.com/wolfRAM606/raga-lens",
+      "demoUrl": "",
+      "demoLabel": ""
+    },
+    {
+      "id": "campus-homie",
+      "title": "Campus Homie",
+      "featured": false,
+      "badge": "",
+      "description": "A community-driven platform built with React and Firebase that enables students and faculty to post help requests, discover resources, and connect with one another.",
+      "tags": [
+        "React",
+        "Firebase",
+        "Vite",
+        "Tailwind"
+      ],
+      "githubUrl": "https://github.com/wolfRAM606/Campus-Homie",
+      "demoUrl": "",
+      "demoLabel": ""
+    }
+  ],
+  "experience": [
+    {
+      "id": "drdl",
+      "icon": "fas fa-briefcase",
+      "title": "Defence Research and Development Laboratory (DRDL), DRDO",
+      "role": "Software Engineering Intern (2026)",
+      "description": "Designed and developed a remote HPC job execution and monitoring system that enables users to submit, monitor, and troubleshoot computational jobs running on remote Linux servers over SSH. The system supports PBS/TORQUE-compatible scheduling, live job monitoring, and intelligent diagnostics to simplify interaction with command-line HPC environments. Working in a research environment reinforced the importance of reliability, maintainability, and understanding systems beyond just writing code."
+    },
+    {
+      "id": "tasl",
+      "icon": "fas fa-briefcase",
+      "title": "Tata Advanced Systems Limited (TASL)",
+      "role": "Engineering Intern",
+      "description": "Introduced to defence engineering workflows and Linux-based radar system testing. Working with mission-critical systems taught me to learn quickly, adapt to unfamiliar technologies, and appreciate the discipline required when software interacts with real-world hardware."
+    },
+    {
+      "id": "stellar",
+      "icon": "fas fa-users-cog",
+      "title": "Stellar (VIT Astronomy Club)",
+      "role": "Senior Core Member",
+      "description": "Organized technical events, coordinated teams, mentored junior members, worked with sponsors, and contributed to workshops and community initiatives. These experiences strengthened my leadership, communication, and collaborative problem-solving skills just as much as my technical ones."
+    },
+    {
+      "id": "hackathons",
+      "icon": "fas fa-laptop-code",
+      "title": "Hackathons",
+      "role": "Winner & Participant",
+      "items": [
+        {
+          "name": "Prodapt Hackathon",
+          "details": "Built MeetMind, an end-to-end AI meeting intelligence platform with structured extraction, anti-hallucination pipelines, and automated follow-up generation. Deployed backend on Render with full test coverage."
+        },
+        {
+          "name": "Unthinkable Hackathon",
+          "details": "Built The Common Room, a full-stack residential maintenance platform with interactive 3D infographics (Three.js), role-based portals, transactional state machines, and automated overdue tracking. Deployed across Vercel, Render, and Neon Cloud."
+        }
+      ]
+    },
+    {
+      "id": "competitions",
+      "icon": "fas fa-trophy",
+      "title": "National Competitions & Recognition",
+      "role": "Finalist & Winner",
+      "items": [
+        {
+          "name": "IIM Indore Case Competitions",
+          "details": "Finalist in both the Ashwamedha – A Legacy Leadership Competition and the B2C Marketing Case Competition at IIM Indore. These national-level challenges pushed me to approach complex problems from business, strategy, and leadership perspectives rather than purely technical ones."
+        },
+        {
+          "name": "Futurepreneurs",
+          "details": "Secured 3rd Place in Futurepreneurs, a university-wide innovation competition focused on entrepreneurship, creativity, and practical problem-solving."
+        }
+      ]
+    }
+  ],
+  "skills": {
+    "languages": [
+      "Python",
+      "JavaScript",
+      "Bash",
+      "C / C++",
+      "Java",
+      "SQL",
+      "HTML / CSS"
+    ],
+    "frameworks": [
+      "React",
+      "FastAPI",
+      "Node.js / Express",
+      "TensorFlow / Keras",
+      "Three.js",
+      "Streamlit",
+      "Tailwind CSS"
+    ],
+    "tools": [
+      "Git / GitHub",
+      "Linux (CentOS)",
+      "Docker",
+      "Vercel / Render",
+      "SSH / Paramiko",
+      "PBS / TORQUE",
+      "Figma"
+    ],
+    "dataAi": [
+      "SQLAlchemy / Prisma ORM",
+      "PostgreSQL / SQLite",
+      "Firebase",
+      "Pydantic / Zod",
+      "Google Gemini AI",
+      "Prompt Engineering"
+    ],
+    "concepts": [
+      "Machine Learning",
+      "REST APIs / WebSockets",
+      "JWT Auth / RBAC",
+      "HPC / Job Scheduling",
+      "3D Data Visualization",
+      "CI/CD / Cloud Deployment"
+    ],
+    "softSkills": [
+      "Fluent in 4 languages",
+      "Public speaking and debate",
+      "Team leadership",
+      "Fast learner and adapter"
+    ]
+  }
+}
