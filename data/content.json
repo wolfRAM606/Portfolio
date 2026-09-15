@@ -31,8 +31,8 @@
         "Pydantic"
       ],
       "githubUrl": "https://github.com/wolfRAM606/MeetMind",
-      "demoUrl": "https://meetmind-backend-xvtn.onrender.com/docs",
-      "demoLabel": "Live API Docs"
+      "demoUrl": "https://meet-mind-ebon.vercel.app",
+      "demoLabel": "Live Demo"
     },
     {
       "id": "the-common-room",
